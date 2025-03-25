@@ -1,4 +1,8 @@
-
+#Aplication name
+spring:
+  application:
+    name: customer-service
+    
   # MongoDB Atlas Connection
   data:
     mongodb:
