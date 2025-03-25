@@ -1,0 +1,21 @@
+server:
+  port: 8888 # Config Server runs on port 8888
+
+spring:
+  application:
+    name: config-server # Name of the Config Server application
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/abhiUmap-tech/config-server # URL of the Git repository
+          # Optionally specify a branch
+          default-label: main
+    
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # Expose all actuator endpoints
+
