@@ -11,11 +11,12 @@ spring:
           uri: https://github.com/abhiUmap-tech/config-server # URL of the Git repository
           # Optionally specify a branch
           default-label: main
-    
 
 management:
   endpoints:
     web:
       exposure:
         include: "*" # Expose all actuator endpoints
-
+  endpoint:
+    health:
+      show-details: always # Show detailed health information
