@@ -1,4 +1,4 @@
-#Aplication name
+# Application name
 spring:
   application:
     name: customer-service
@@ -29,3 +29,11 @@ eureka:
     prefer-ip-address: true # Prefer using IP address for registration
     instance-id: ${spring.application.name}:${server.port} # Unique instance ID for each service
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # Expose all actuator endpoints
+  endpoint:
+    health:
+      show-details: always # Show detailed health information
